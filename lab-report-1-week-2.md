@@ -1,7 +1,7 @@
 # Remote Access to Another Server
 
 ## _Before We Begin:_
-Make sure that you have an IDE set up on your local machine. If you don't have one installed, no worries! A great IDE to use is Visual Studio Code. Here is the link to download it on to your computer: https://code.visualstudio.com/.
+Make sure that you have an IDE set up on your local machine. If you don't have one installed, no worries! A great IDE to use is Visual Studio Code. Here is the link to download it on to your computer: [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
 After you have it installed, and you click the Visual Studio code icon, this is what the window should look like (__Note:__ Depending on your system settings, menu bars and colors may look different.)
 
@@ -9,7 +9,7 @@ After you have it installed, and you click the Visual Studio code icon, this is 
 
 ## _Step 1: Remotely Connecting_
 
-First, open a terminal in VSCode (You can use ctrl or command + ` to have the terminal appear), or any teminal.
+First, open a terminal in VSCode (You can use ctrl or command + ` to have the terminal appear), or any other teminal.
 
 ![VS terminal](photos/terminal_window.png)
 
@@ -71,6 +71,28 @@ To check if the file was properly copied over use the command `ls` in your home 
 
 ## _Step Four: Setting an SSH Key_
 
+A way to make ssh more convenient is to generate ssh keys! By generating a ssh key we won't need to type in our password everytime we want to log in to the server. To generate a ssh key use the command `ssh-keygen`. If you already have an exsisting rsa key on your local machine, simply just make a new file to store it. You should get a similar output to this: 
+
+![ssh_key_result](photos/ssh_key_output.png)
+
+A public and private key should be created in the `.ssh` directory.
+
+To use the key, copy the public key onto the server. This can be done by first logging into the remote server and making a `.ssh` directory by using the command  `mkdir .ssh` . Then on the local machine type the command:
+
+`scp /Users/pelmini/.ssh/cse15L_key.pub cs15lwi22ajs@ieng6.ucsd.edu:~/.ssh/authorized_keys`
+
+(__Note:__ Make sure to use your respective username and path)
+
+If your file succesfully copied over you should see an output like this: 
+
+![scp output](photos/scp_output.png)
+
+Now you should be able to login into the server without typing in your password (__Note:__ If you are like me and have multiple rsa keys on your machine, you will have to specify which key you want to use to login onto the server. This can be done by putting the flag `-i` after the ssh key command and the file path of where your private key is located. `-i` stands for identity file.)
+
+![ssh login](photos/ssh_login.png)
 
 ## _Step Five: Optimizing Remote Running_
 
+Another way to optimize remote running, is that you can write commands in quotes at the end of a `ssh` command. By doing so, the command will log in to the server, run the commands in the quotes and then exit the remote server. Furthermore, if you wanted to run multiple commands on the same line you can seperate the commands by semicolons. The screen shot below shows an example.  
+
+![cmds output](photos/cmd_output.png)
