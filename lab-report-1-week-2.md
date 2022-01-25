@@ -93,6 +93,7 @@ Now you should be able to login into the server without typing in your password 
 
 ## _Step Five: Optimizing Remote Running_
 
-Another way to optimize remote running, is that you can write commands in quotes at the end of a `ssh` command. By doing so, the command will log in to the server, run the commands in the quotes and then exit the remote server. Furthermore, if you wanted to run multiple commands on the same line you can seperate the commands by semicolons. The screen shot below shows an example.  
+Another way to optimize remote running, is that you can write commands in quotes at the end of a `ssh` command. By doing so, the command will log in to the server, run the commands in the quotes and then exit the remote server. Furthermore, if you wanted to run multiple commands on the same line you can seperate the commands by semicolons. The screen shot below shows an example. By combining the commands with semicolons, it saves time and keystrokes!  
 
+The best process I came up with to run a program in another server was to copy and paste the commands I used earlier, and combine the programs with semicolons  wanted. By doing so I was able to run the program on another server in about 6 keystrokes. This took me a total time of around 3 seconds. 
 ![cmds output](photos/cmd_output.png)
