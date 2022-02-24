@@ -1,5 +1,9 @@
 # Debuggers
 
+## Links
+- [My Repository](https://github.com/pelmini/markdown-parse)
+- [Reviewed Repository](https://github.com/yi113/markdown-parse)
+
 ## Test Code for Snippets: 
 ![Test Code](photos/code_to_test_snippets.png)
 
