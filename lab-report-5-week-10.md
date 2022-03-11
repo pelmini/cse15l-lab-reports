@@ -11,6 +11,7 @@ For this test, my implementation would be correct because there are no links in 
 <br />
 
 __Test File:__ 
+
 ![Test File 201](photos/test_201.png)
 
 __My Output:__ 
@@ -27,9 +28,8 @@ __Area to Fix:__
 
 ## Test 202
 For this test, my implementation is incorrect as the correct output should be an array list containing moon.jpg. Since the test file contains a nested link, a way to fix this would be to refactor the conditional of how the parenthesis and brackets are counted.  
-<br />
-
 __Test File:__ 
+
 ![Test File 530](photos/test_530.png)
 
 __My Output:__ 
