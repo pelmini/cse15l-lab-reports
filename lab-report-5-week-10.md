@@ -28,6 +28,7 @@ __Area to Fix:__
 
 ## Test 202
 For this test, my implementation is incorrect as the correct output should be an array list containing moon.jpg. Since the test file contains a nested link, a way to fix this would be to refactor the conditional of how the parenthesis and brackets are counted.  
+
 __Test File:__ 
 
 ![Test File 530](photos/test_530.png)
