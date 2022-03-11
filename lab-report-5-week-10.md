@@ -8,6 +8,7 @@ __Command:__
 
 ## Test 201
 For this test, my implementation would be correct because there are no links in the test file. Although there is a bracket that is followed by () (which is the syntax for a link in markdown), the two are separated by two brackets (<>) which makes the syntax void. In order to fix this bug, there should be a condition that determines if the closed bracket and open parenthesis are next to each other. A possible solution to the bug would be taking the index of the two and subtracting them. If the difference is equal to one, then that means it is a link but if not then it is something else.
+
 __Test File:__ 
 ![Test File 201](photos/test_201.png)
 
